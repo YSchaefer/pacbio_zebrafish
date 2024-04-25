@@ -2,8 +2,8 @@ setwd("C:/Dump/")
 
 library(ggplot2)
 
-three_wilds = read.table("three_wilds_relative_with_occurrences.tsv")
-four_wilds = read.table("four_wilds_relative_with_occurrences.tsv")
+three_wilds = read.table("three_wild_pan_fig3.tsv")
+four_wilds = read.table("four_wild_pan_fig3S2.tsv")
 
 
 scale = c(0,0.2,0.4,0.6,0.8,1)

@@ -1,6 +1,6 @@
 setwd("C:/Dump/")
 
-read_percentages = read.table("all_read_percentages.tsl", header = T)
+read_percentages = read.table("all_read_percentages_fig2S1.tsv", header = T)
 
 library(ggplot2)
 library(dplyr)

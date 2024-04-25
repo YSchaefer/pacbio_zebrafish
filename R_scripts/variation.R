@@ -8,8 +8,8 @@ library(ggplot2)
 library(scales)
 library(tidyr)
 
-B30.2_statistics = read.table("B30.2_variation_statistics.tbl", header = T)
-FISNACHT_statistics = read.table("FISNACHT_variation_statistics.tsv", header = T)
+B30.2_statistics = read.table("B30.2_variation_fig4.tsv", header = T)
+FISNACHT_statistics = read.table("FISNACHT_variation_fig4.tsv", header = T)
 
 B30.2_statistics$Class = rep("Unknown", times = 4351)
 

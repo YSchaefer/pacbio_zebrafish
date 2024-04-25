@@ -1,6 +1,6 @@
 setwd("C:/Dump/")
 
-read_lengths = read.table("NLR_read_lengths.tsv", header = T)
+read_lengths = read.table("NLR_read_lengths_fig2S1.tsv", header = T)
 
 library(ggplot2)
 library(RColorBrewer)

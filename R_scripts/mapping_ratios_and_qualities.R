@@ -1,8 +1,8 @@
 setwd("C:/Dump/")
 
-mapping_ratios = read.table("mapping_ratios.tbl", header = T)
+mapping_ratios = read.table("mapping_ratios_fig2S2.tsv", header = T)
 
-NLR_mapping_stats = read.table("orthocluster_mapping_stats.tbl", header = T)
+NLR_mapping_stats = read.table("orthocluster_mapping_stats_fig2S2.tsv", header = T)
 
 no_none = NLR_mapping_stats[NLR_mapping_stats$Mapping_Quality!="None",]
 

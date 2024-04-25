@@ -7,7 +7,7 @@ library(dplyr)
 library(RColorBrewer)
 
 
-orthocluster_counts = read.table("orthocluster_counts.tsv", header = T)
+orthocluster_counts = read.table("orthocluster_counts_fig2.tsv", header = T)
 
 lab_wild_reordered = orthocluster_counts %>%
   mutate(pop_names = fct_relevel(Population, "TU", "CGN", "DP", "KG", "SN", "CHT"))

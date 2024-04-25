@@ -1,6 +1,6 @@
 setwd("C:/Dump")
 
-NLR_contig_lengths = read.table("NLR_contig_lengths.tsv", header = T)
+NLR_contig_lengths = read.table("NLR_contig_lengths_fig2S1.tsv", header = T)
 
 library(ggplot2)
 library(RColorBrewer)
@@ -34,7 +34,7 @@ dev.off()
 
 # NLR Contig Counts
 
-NLR_contig_counts = read.table("NLR_contig_counts.tsv", header = T)
+NLR_contig_counts = read.table("NLR_contig_counts_fig2S1.tsv", header = T)
 
 NLR_contig_counts_reordered = NLR_contig_counts %>%
   mutate(pop_names = fct_relevel(Population, "TU", "CGN", "DP", "KG", "SN", "CHT"))
@@ -73,7 +73,7 @@ dev.off()
 
 # Counts of B30.2 contigs in NLRs and otherwise, informed by the special exon
 
-B30.2_contig_counts = read.table("B30.2_contig_counts.tsv", header = T)
+B30.2_contig_counts = read.table("B30.2_contig_counts_fig2S3.tsv", header = T)
 
 B30.2_contig_counts_reordered = B30.2_contig_counts %>%
   mutate(pop_names = fct_relevel(Population, "TU", "CGN", "DP", "KG", "SN", "CHT"))
