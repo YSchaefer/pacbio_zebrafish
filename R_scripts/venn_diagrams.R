@@ -5,7 +5,8 @@ setwd("C:/Dump")
 
 library(ggvenn)
 
-zfdat <- read.table("NLR-B30.2.venn_diagram_fig2S1.tsv", header = T)
+zfdat <- read.table("B30.2.venn_diagram_fig3S1.tsv", header = T)
+zfdat <- zfdat[zfdat$NLR == "yes",] # only include NLR-B30.2, exclude other B30.2
 zfdat <- zfdat[rowSums(zfdat[,c(7:99)]) > 0,] # exclude contigs not supported by any HiFi reads
 zfcounts <- zfdat[,c(1:6)] # create a new table for population counts, then fill it in the next steps
 zfcounts$CGN <- rowSums(zfdat[,colnames(zfdat)[grepl("CGN[0-9]",colnames(zfdat)) == T]])
@@ -27,7 +28,7 @@ dev.off()
 
 ## For FISNACHT
 
-zfdat <- read.table("FISNACHT.venn_diagram_fig2S1.tsv", header = T)
+zfdat <- read.table("FISNACHT.venn_diagram_fig3S1.tsv", header = T)
 zfdat <- zfdat[rowSums(zfdat[,c(8:100)]) > 0,] # exclude contigs not supported by any HiFi reads
 zfcounts <- zfdat[,c(1:7)] # create a new table for population counts, then fill it in the next steps
 zfcounts$CGN <- rowSums(zfdat[,colnames(zfdat)[grepl("CGN[0-9]",colnames(zfdat)) == T]])
